@@ -1,4 +1,5 @@
-# Discord News Bot
+# New York Times Bot
+![The_New_York_Times_logo](https://github.com/szeremeta1/new-york-times-discord-bot/assets/66704967/310d7f89-5353-4a82-9cb2-2506012762cd)
 
 This is a Discord bot that fetches the top headlines from the New York Times RSS feed and sends them as neatly formatted messages to a specified channel.
 
@@ -9,30 +10,17 @@ discord-news-bot
 ├── src
 │   ├── bot.js
 │   ├── news.js
-│   └── config.js
+│   └── config.json
 ├── package.json
-├── .env
 └── README.md
 ```
-
-The project has the following files:
-
-- `src/bot.js`: This file contains the code for the Discord bot. It sets up the bot, connects to the Discord server, and handles incoming messages and commands.
-
-- `src/news.js`: This file contains the code for fetching the top headlines from the New York Times RSS feed. It retrieves the headlines, extracts the necessary information (title, tagline, link, and image), and formats them into a message.
-
-- `src/config.js`: This file contains the configuration settings for the bot, such as the Discord token and the specified channel where the bot will send the news headlines.
-
-- `package.json`: This file is the configuration file for npm. It lists the dependencies and scripts for the project.
-
-- `.env`: This file is used to store sensitive information, such as the Discord token. It is not committed to version control for security reasons.
 
 ## Setup
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/discord-news-bot.git
+   git clone https://github.com/your-username/new-york-times-discord-bot.git
    ```
 
 2. Install the dependencies:
@@ -44,21 +32,16 @@ The project has the following files:
 
 3. Configure the bot:
 
-   - Open the `.env` file and add your Discord bot token:
+   - Open `config.json`, add your Discord bot token, and specify the channel ID where the bot will send the news headlines:
 
      ```
-     DISCORD_TOKEN=your-discord-bot-token
+     {
+        "token": "INSERT-TOKEN-HERE",
+        "channelId": "INSERT-NEWS-CHANNEL-HERE"
+     }
      ```
 
-   - Open the `src/config.js` file and specify the channel ID where the bot will send the news headlines:
-
-     ```javascript
-     module.exports = {
-       channelID: 'your-channel-id',
-     };
-     ```
-
-4. Start the bot:
+3. Start the bot:
 
    ```bash
    npm start
@@ -70,8 +53,4 @@ The project has the following files:
 
 Once the bot is running and connected to your Discord server, it will automatically fetch the top headlines from the New York Times RSS feed at regular intervals and send them as neatly formatted messages to the specified channel.
 
-You can customize the fetch interval and other settings by modifying the code in `src/news.js` and `src/config.js`.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+You can customize the fetch interval and other settings by modifying the code in `src/news.js` and `src/bot.js`.
