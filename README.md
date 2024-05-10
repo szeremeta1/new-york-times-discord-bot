@@ -26,7 +26,7 @@ discord-news-bot
 2. Install the dependencies:
 
    ```bash
-   cd discord-news-bot
+   cd new-york-times-discord-bot
    npm install
    ```
 
