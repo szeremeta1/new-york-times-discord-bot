@@ -1,0 +1,16 @@
+{
+  "name": "new-york-times-discord-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot that fetches top headlines from the New York Times RSS feed and publishes them to a specified channel.",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js"
+  },
+  "dependencies": {
+    "discord.js": "^13.17.1",
+    "rss-parser": "^3.11.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
