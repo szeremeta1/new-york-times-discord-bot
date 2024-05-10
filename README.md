@@ -44,7 +44,7 @@ discord-news-bot
 3. Start the bot:
 
    ```bash
-   npm start
+   node ./src/bot.js
    ```
 
    The bot will now connect to your Discord server and start fetching and sending the top headlines from the New York Times RSS feed to the specified channel.
